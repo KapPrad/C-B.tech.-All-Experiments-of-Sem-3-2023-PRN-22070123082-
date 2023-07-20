@@ -1,3 +1,18 @@
+//1.
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout<<"hello world"<<endl;
+    cout<<"MY First program";
+    
+    return 0;
+}
+/* OUTPUT:
+hello world
+MY first program */
+
+//2.
 /*PRN:22070123082
 # Calculator #                                                    */
 #include <iostream>
@@ -26,3 +41,4 @@ Difference is:8
 Product is:20
 Quotient is:5
 */
+
