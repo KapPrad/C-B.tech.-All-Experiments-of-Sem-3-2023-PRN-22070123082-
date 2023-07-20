@@ -1,0 +1,28 @@
+/*PRN:22070123082
+# Calculator #                                                    */
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a , b;
+    cout<<"enter a "<<endl;
+    cin>>a;
+    cout<<"enter b"<<endl;
+    cin>>b;
+    cout<<"sum is:"<<a+b<<endl;
+    cout<<"Difference is:"<<a-b<<endl;
+    cout<<"Product is:"<<a*b<<endl;
+    cout<<"Quotient is:"<<a/b<<endl;
+    return 0;
+}
+/*
+output:
+enter a 
+->10
+enter b
+->2
+sum is:12
+Difference is:8
+Product is:20
+Quotient is:5
+*/
