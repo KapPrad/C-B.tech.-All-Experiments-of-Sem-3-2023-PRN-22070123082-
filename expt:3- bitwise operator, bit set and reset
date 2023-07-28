@@ -1,0 +1,52 @@
+//a.
+//PRN:22070123082
+//bitwise operator
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=13,b=67,bl, br, set ,reset ;
+    cout<<"a or b:"<<(a|1)<<endl;
+    cout<<"a and b:"<<(a & 11)<<endl;
+    bl=b<<3;
+    cout<<"l shift:"<<bl<<endl;
+    br=b>>4;
+    cout<<"r shift:"<<br<<endl;
+    
+}
+/*
+a or b:13
+a and b:9
+l shift:536
+r shift:4
+*/
+
+//b.
+//PRN:22070123082
+//bit set and reset 
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=48,bset, breset, bl, br;
+    cout<<"enter bit to be set:"<<endl;
+    cin>>bset;
+    cout<<"enter bit to be reset:"<<endl;
+    cin>>breset;
+    br=a | (1<<bset);
+    bl=a & (~1>>breset);
+    cout<<"set bit:"<<br<<endl;
+    cout<<"reset bit:"<<bl<<endl;
+    return 0;
+}
+/* 
+OUTPUT:
+enter bit to be set:
+6
+enter bit to be reset:
+1
+set bit:112
+reset bit:48 
+*/
