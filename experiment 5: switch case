@@ -1,0 +1,229 @@
+//a.
+/*22070123082
+Odd_Even*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a;
+    
+    cout<<"Enter the number :";
+    cin>>a;
+
+    if(a%2 == 0)
+    {
+        cout<<"Even";
+    }
+    else
+    {
+        cout<<"Odd";
+    }
+
+    return 0;
+}
+/*
+OUTPUT
+Enter the number :3
+Odd
+*/
+
+//b.
+/*22070123082
+Number_Comparision_three*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a,b,c;
+
+    cout<<"Enter the value of a : ";
+    cin>>a;
+    cout<<"Enter the value of b : ";
+    cin>>b;
+    cout<<"Enter the value of c : ";
+    cin>>c;
+
+    if(a<b)
+    {
+        if(c<b)
+        {
+            cout<<"b is the greatest number";
+        }
+        else
+        {
+            cout<<"c is the greatest number";
+        }
+    }
+
+    else if(b>a)
+    {
+        if(c>a)
+        {
+            cout<<"a is the greatest number";
+        }
+        else
+        {
+            cout<<"c is the greatest number";
+        }
+    }
+    else
+    {
+        cout<<"All numbers are equal";
+    }
+
+    return 0;
+}
+/*
+OUTPUT
+Enter the value of a : 2
+Enter the value of b : 3
+Enter the value of c : 4
+c is the greatest number
+*/
+
+//c.
+/*22070123082
+Calculator_switch*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    float a,b;
+    int c = 4;
+
+    cout<<"Enter the first Number :";
+    cin>>a;
+
+    cout<<"Enter the second Number :";
+    cin>>b;
+
+    cout<<"Enter the operation to execute :"<<endl;
+    cout<<"1.Sum"<<endl;
+    cout<<"2.Substraction"<<endl;
+    cout<<"3.Multiplication"<<endl;
+    cout<<"4.Division"<<endl;
+    cin>>c;
+
+    switch(c)
+    {
+        case 1:
+        {
+            cout<<"The sum is :"<<a+b<<endl;
+            break;
+        }
+
+        case 2:
+        {
+            cout<<"The difference is :"<<a-b<<endl;
+            break;
+        }
+
+        case 3:
+        {
+            cout<<"The product is :"<<a*b<<endl;
+            break;
+        }
+
+        case 4:
+        {
+            cout<<"The quotient is :"<<a/b<<endl;
+            break;
+        }
+
+        default:
+        {
+            cout<<"Wrong Input";
+            break;
+        }
+    }
+
+    return 0;
+}
+/*
+OUTPUT
+Enter the first Number :2
+Enter the second Number :3
+Enter the operation to execute :
+1.Sum
+2.Substraction
+3.Multiplication
+4.Division
+3
+The product is :6
+*/
+
+//d.
+/*22070123082
+Days_of_week*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int day = 7;
+
+    cout<<"Enter the day you want :";
+    cin>>day;
+
+    switch(day)
+    {
+        case 1:
+        {
+            cout<<"Monday"<<endl;
+            break;
+        }
+
+        case 2:
+        {
+            cout<<"Tuesday"<<endl;
+            break;
+        }
+
+        case 3:
+        {
+            cout<<"Wednesday"<<endl;
+            break;
+        }
+
+        case 4:
+        {
+            cout<<"Thursday"<<endl;
+            break;
+        }
+
+        case 5:
+        {
+            cout<<"Friday"<<endl;
+            break;
+        }
+
+        case 6:
+        {
+            cout<<"Saturday"<<endl;
+            break;
+        }
+
+        case 7:
+        {
+            cout<<"Sunday"<<endl;
+            break;
+        }
+
+        default:
+        {
+            cout<<"Wrong Input";
+            break;
+        }
+
+    }
+
+    return 0;
+}
+/*
+OUTPUT
+Enter the day you want :5
+Friday
+*/
