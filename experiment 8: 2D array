@@ -1,0 +1,249 @@
+//a.
+/*22070123082
+2D_array*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cout << "Enter the number of rows :";
+    cin >> a;
+    cout << "Enter the number of columns :";
+    cin >> b;
+
+    int arr[a][b];
+
+    for( int i = 0; i < a; i++)
+    {
+        for(int j = 0; j < b; j++)
+        {
+            cout << "Enter the array element at location (" << i << ", " << j <<" ):";
+            cin >> arr[i][j];
+        }
+    }
+
+    cout << " The array is :" << endl;
+    for( int i = 0; i < a; i++)
+    {
+        for( int j = 0; j < b; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+/*
+OUTPUT
+Enter the number of rows :2
+Enter the number of columns :2
+Enter the array element at location (0, 0 ):1
+Enter the array element at location (0, 1 ):2
+Enter the array element at location (1, 0 ):3
+Enter the array element at location (1, 1 ):4
+ The array is :
+1 2 
+3 4 
+*/
+
+//b.
+/*22070123082
+2D_array*/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i, j, k, l, m, n, o, p;
+
+    cout << "Enter the number of rows for first matrix: ";
+    cin >> i;
+    cout << "Enter the number of columns for first matrix: ";
+    cin >> j;
+    cout<< "Enter the number of rows for second matrix: ";
+    cin >> k;
+    cout << "Enter the number of columns for second matrix: ";
+    cin >> l;
+
+    int mat1[i][j];
+    int mat2[k][l];
+    int sum[m][n];
+    int mult[o][p];
+
+    for (int a = 0; a < i; a++)
+    {
+        for (int b = 0; b < j; b++)
+        {
+            cout << "Enter the matrix1 element at position (" << a << ", " << b << "): ";
+            cin >> mat1[a][b];
+        }
+    }
+
+    for (int a = 0; a < k; a++)
+    {
+        for(int b = 0; b < l; b++)
+        {
+            cout << "Enter the matrix2 element at position (" << a << ", " << b << "):";
+            cin >> mat2[a][b];
+        }
+    }
+
+    cout << "The matrix1 is :" << endl;
+    for (int a = 0; a < i; a++)
+    {
+        for (int b = 0; b < j; b++)
+        {
+            cout << mat1[a][b] << " ";
+        }
+        cout << endl;
+    }
+
+    cout << "The matrix2 is :" << endl;
+    for (int a = 0; a < k; a++)
+    {
+        for (int b = 0; b < l; b++)
+        {
+            cout << mat2[a][b] << " ";
+        }
+        cout << endl;
+    }
+
+    cout<< "The sum is :"<< endl;
+    for(int a = 0; a < i; a++)
+    {
+        for(int b = 0; b < j; b++)
+        {
+            sum[a][b] = mat1[a][b] + mat2[a][b];
+            cout << sum[a][b] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+/*
+OUTPUT
+Enter the number of rows for first matrix: 2
+Enter the number of columns for first matrix: 2
+Enter the number of rows for second matrix: 2
+Enter the number of columns for second matrix: 2
+Enter the matrix1 element at position (0, 0): 2
+Enter the matrix1 element at position (0, 1): 2
+Enter the matrix1 element at position (1, 0): 2
+Enter the matrix1 element at position (1, 1): 2
+Enter the matrix2 element at position (0, 0):1
+Enter the matrix2 element at position (0, 1):2
+Enter the matrix2 element at position (1, 0):3
+Enter the matrix2 element at position (1, 1):4
+The matrix1 is :
+2 2 
+2 2 
+The matrix2 is :
+1 2 
+3 4 
+The sum is :
+3 4 
+5 6 
+*/
+
+//c.
+/*22070123082
+Matrix_Multiplication*/
+#include<iostream>
+using namespace std;
+
+int main()
+
+{
+    int row1, row2, col1, col2;
+    int matrix1[10][20];
+    int matrix2[10][20];
+    int multiply[10][20];
+    int i, j;
+
+    cout<<"Enter the number of rows for first matrix"<<endl;
+    cin>>row1;
+    cout<<"Enter the number of columns for first matrix"<<endl;
+    cin>>col1;
+
+    cout<<"Enter the number of rows for second matrix"<<endl;
+    cin>>row2;
+    cout<<"Enter the number of rows for first matrix"<<endl;
+    cin>>col2;
+
+    if(col1 == row2)
+    {
+        cout<<"Proceed with the matrix multiplication"<<endl;
+    }
+
+    else
+    {
+        cout<<"Number of column of first matrix is not equal to number of rows of second matrix"<<endl;
+    }
+    
+    cout<<"Enter the first matrix inputs: "<<endl;
+
+    for(i = 0; i < col1; i++)
+    {
+        for(j = 0; j < row1; j++)
+        {
+            cin>>matrix1[i][j];
+        }
+    }
+
+    cout<<"Enter the second matrix inputs: "<<endl;
+
+    for(i = 0; i < col2; i++)
+    {
+        for(j = 0; j < row2; j++)
+        {
+            cin>>matrix2[i][j];
+        }
+    }
+
+    for(i = 0; i < row1; i++)
+    {
+        for(j = 0; j < col2; j++)
+        {
+            multiply[i][j] = matrix1[i][j] * matrix2[j][i];
+        }
+    }
+
+    for(i = 0; i < row1; i++)
+    {
+        for(j = 0; j < col2; j++)
+        {
+            cout<<multiply[i][j]<<endl;
+        }
+    }
+
+    return 0;
+}
+/*
+OUTPUT
+Enter the number of rows for first matrix
+2
+Enter the number of columns for first matrix
+2
+Enter the number of rows for second matrix
+2
+Enter the number of rows for first matrix
+2
+Proceed with the matrix multiplication
+Enter the first matrix inputs: 
+1
+2
+3
+4
+Enter the second matrix inputs: 
+5
+6
+7
+8
+5
+14
+18
+32
+*/
