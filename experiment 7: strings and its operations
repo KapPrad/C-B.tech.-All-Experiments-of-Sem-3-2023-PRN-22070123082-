@@ -1,0 +1,299 @@
+//a.
+/*22070123082
+array.cpp*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int arr[10] = {55,60,40,70,80,90,20,25,45,30},i;
+
+    for(i = 0; i<=10; i++)
+    {
+        cout<<arr[i]<<endl;
+    }
+
+    return 0;
+}
+/*
+OUTPUT
+55
+60
+40
+70
+80
+90
+20
+25
+45
+30
+*/
+
+//b.
+/*22070123082
+Marks_Display*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int marks[5];
+    int i,check,flag;
+
+    cout<<"Enter the marks of student :";
+    for(i=0;i<5;i++)
+    {
+        cin>>marks[i];
+    }
+
+    cout<<"Enter the element you want to check :";
+    cin>>check;
+
+    for(i=0;i<5;i++)
+    {
+        if(marks[i]==check)
+        {
+            cout<<"The number is present at location :"<<i+1<<endl;
+            flag = 1;
+        }
+
+        else if(flag == 0)
+        {
+            cout<<"The number is not present";
+            break;
+        }
+    }
+
+    return 0;
+}
+/*
+OUTPUT
+Enter the marks of student :10
+20
+20
+30
+20
+Enter the element you want to check :20
+The number is present at location :2
+The number is present at location :3
+The number is present at location :5
+*/
+
+//c.
+/*22070123082
+Array_Max*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int array[5] = {100,20,30,40,50};
+    int i,j,temp;
+
+    for(i=0;i<5;i++)
+    {
+
+        for(j=0;j<5;j++)
+        {
+            if(array[j]>array[j+1])
+            {
+                temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+            }
+        }
+    }
+
+    cout<<"Maximum number is :"<<array[5]<<endl;
+    cout<<"Minimum number is :"<<array[0];
+
+    return 0;
+}
+/*
+OUTPUT
+Maximum number is :100
+Minimum number is :20
+*/
+
+//d.
+/*22070123082
+Array_Sum_Avg*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int arr[5] = {10, 20, 30, 40, 50};
+    int i, sum = 0;
+
+    for (i = 0; i < 5; i++)
+    {
+        sum = sum + arr[i];
+    }
+
+    
+    int avg = sum / 2;
+
+    cout << "Sum is: " << sum << endl;
+    cout << "Average is: " << avg << endl;
+
+    return 0;
+}
+
+/*
+OUTPUT
+Sum is: 150
+Average is: 75
+*/
+
+//e.
+/*22070123082
+Flip_The_Array*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int marks[10] = {98, 90, 99, 96, 80, 92, 94, 95, 93, 100};
+    int flip[10];
+    int j = 0;
+    for (int i = 9; i >= 0; --i)
+    {
+        flip[j] = marks[i];
+        j++;
+    }
+    for (int i =0; i<10; i++) {
+        cout << flip[i] << " "; 
+    }
+    // cout << flip[9];
+    return 0;
+}
+/*
+Output:100 93 95 94 92 80 96 99 90 98
+*/
+
+//f.
+/*22070123082
+string_display*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    string name[10];
+    int i;
+
+    cout<<"Enter the string to display :";
+
+    for(i=0;i<=10;i++)
+    {
+        cin>>name[i];
+        cout<<"The name is :"<<name[i]<<endl;
+        break;
+    }
+    return 0;
+}
+/*
+OUTPUT
+Enter the string to display :Pradnesh
+The name is :Pradnesh
+*/
+
+//g.
+/*22070123082
+string_length*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    char str[10] = "Pradnesh";
+    int i,length = 0;
+
+    for(i=0; str[i] !='\0'; ++i)
+    {
+        length++;
+    }
+    cout<<"Length of string is :"<<length;
+
+    return 0;
+}
+/*
+OUTPUT
+Length of string is 8
+*/
+
+//h.
+/*22070123082
+string_concat*/
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str1 = "Pradnesh";
+    string str2 = "Kapte";
+    string str3 = str1 + str2;
+    int i,len,temp;
+    cout<<str3<<endl;
+    cout<<"Length of string is :"<<str3.length()<<endl;;
+    len=str3.size();
+    for(i=0; i<len/2; i++)
+    {
+        temp=str3[i];
+        str3[i]=str3[len-i-1];
+        str3[len-i-1]=temp;
+    }
+   cout<<"Given String is reversed :"<<str3;
+
+    return 0;
+}
+/*
+OUTPUT
+PradneshKapte
+Length of string is :13
+Given String is reversed :etpaKhsendarP
+*/
+
+//i.
+/*22070123082
+palindrome*/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string str;
+    int i, len;
+
+    cout << "Enter a string: ";
+    cin >> str;
+
+    len = str.size();
+
+    for (i = 0; i < len / 2; i++)
+    {
+        char temp = str[i];
+        str[i] = str[len - i - 1];
+        str[len - i - 1] = temp;
+    }
+
+    cout<<str<<endl;
+
+    if (str == str)
+    {
+        cout << "Palindrome" << endl;
+    }
+    else if(str != str)
+    {
+        cout << "Not a Palindrome" << endl;
+    }
+
+    return 0;
+}
+/*
+OUTPUT
+mom
+palindrome
+*/
